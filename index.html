@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.ec294d85b6bb1cdfb839.css">
+    <script src="./js/jquery.min.js" rel="text/javascript"></script>
+    <script src="./js/jquery-ui.min.js" rel="text/javascript"></script>
+    <script src="./js/bootstrap.js" rel="text/javascript"></script>
+</head>
+
+<body style="color:black">
+
+    <nav class="uk-navbar-container uk-navbar">
+        <div class="uk-navbar-left">
+            <img style="float:left;margin-top:8px;margin-left:15px;margin-right:15px;margin-bottom:8px" src="img/Asset 8.png" />
+            <a class="uk-margin-left-small uk-button uk-button-primary decpadding" href="#" id="about" onclick="showAbout()">
+                <span class="nav-text uk-visible@s">ABOUT</span>
+            </a>
+            <a class="uk-margin-left-small uk-button uk-button-primary decpadding" href="#" id="questions" onclick="showWelcome()">
+                <span class="nav-text uk-visible@s">GETTING STARTED</span>
+            </a>
+            <a class="uk-button uk-button-primary decpadding" href="#" id="demos" onclick="showDemos()">
+                <span class="nav-text uk-visible@s">DEMOS</span>
+            </a>
+            <a class="uk-button uk-button-primary decpadding" href="#" id="exercises" onclick="showExercises()">
+                <span class="nav-text uk-visible@s">EXERCISES</span>
+            </a>
+            <!--<a class="uk-button uk-button-primary decpadding" href="#" id="question" onclick="showQuestions()">
+                <span class="nav-text uk-visible@s"> MINI PROJECT</span>
+            </a>-->
+
+            <a class="uk-button uk-button-primary decpadding" href="#" id="capstone" onclick="showCapstone()">
+                <span class="nav-text uk-visible@s">CAPSTONE PROJECT</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="uk-container">
+
+        <!-------------------------------ABOUT Tab ------------------------>
+        <div style="display:none" id="about_p">
+            <br/>
+
+            <div>
+                <div align="center">
+                    <span class="heading" style="color:blue;font-size:1.5rem">DevOps Playground</span>
+                </div>
+            </div>
+            
+            <br/>Learn and practice Continuous Integration using DevOps Playground! 
+            <br/>
+            <br/> This Playground comes preloaded with development environment comprising of the following tools:
+            <br/>
+            <ul type="disc">
+                <li>Git</li>
+                <li>SonarQube </li>
+                <li>Junit</li>
+                <li>Cobertura</li>
+				<li>Maven</li>
+				<li>Tomcat</li>
+				<li>Artifactory</li>
+				<li>Jenkins</li>
+            </ul>
+            For a quick jump-start, the Playground has 
+            <strong>demos</strong> and
+            <strong>exercises</strong> (refer Table 1). Demos and exercises starter code is available in a pre-loaded Java project
+            for you to quickly get on with learning through demos and practicing using exercises.
+            <br/>
+            <br/> The Playground is also loaded with Capstone Project specification which will help you practice setting up and working with an end to end Continuous integration pipeline.
+            <br/>
+			<br>Apart from these demos, exercises and capstone project, this playground also allows you to create your own PoCs/projects
+			</br>
+            <br/>
+
+
+            <strong>TABLE 1: Learning outcomes and related demos/exercises </strong>
+        
+                <table class="uk-table uk-table-responsive" border="1" style="width:100%">
+                    <thead>
+                        <tr style="background-color:cornflowerblue;color:white;font-size:18px">
+                            <td style="text-align:center">#</td>
+                            <td style="text-align:center">Learning Outcome</td>
+                            <td style="text-align:center">Demo/Exercise</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">1</td>
+                            <td style="vertical-align:middle">Perform basic Git operations using Eclipse </td>
+                            <td>Demo 1: Version control using Git – 1
+                                <br/>Demo 2: Version control using Git – 2
+								<br/>Exercise 1: Operations on Git Repository using Eclipse IDE
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">2</td>
+                            <td style="vertical-align:middle">Perform static analysis using SonarQube</td>
+                            <td>Demo 3: Static quality analysis with SonarQube
+                                <br/> Exercise 2: Creating profiles using SonarQube
+								<br/>Exercise 3: Using SonarQube with build script
+							</td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">3</td>
+                            <td style="vertical-align:middle">Perform build automation for Java web app using Maven</td>
+                            <td>Demo 4: Build automation using Maven
+                                <br/> Exercise 4: Build automation using Maven
+							</td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">4</td>
+                            <td style="vertical-align:middle">Implement binary versioning using Artifactory</td>
+                            <td>Exercise 5: Setting up Artifactory & other servers
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">5</td>
+                            <td style="vertical-align:middle">Implement continuous integration using Jenkins</td>
+                            <td>Demo 5: Jenkins basic configurations
+                                <br/>Demo 6: Continuous integration using Jenkins
+                                <br/> Exercise 6: Installing plugins to Jenkins
+								<br/> Exercise 7: Job creation & configuring build pipeline in Jenkins
+								<br/> Exercise 8: Observing build reports and pipeline view configuration
+								</td>
+
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">6</td>
+                            <td style="vertical-align:middle">Control quality of CI builds using quality gates</td>
+                            <td>Demo 7: Gating conditions in Jenkins pipeline
+                                <br/> Exercise 9: Configuring gating conditions
+                            </td>
+						</tr>
+                    </tbody>
+                </table>
+            <br/>
+            For a refresh on the DevOps concepts, please refer to  <strong>"DevOps CICD - Open Source Tool Chain"</strong> course on Lex.
+
+            <br/><br/> In case of any issue related to this playground contact
+            <span style="color:blue">apurba_behera@infosys.com</span>
+            <br/>
+            <br/>
+            <div align="center">
+                <button onclick="showWelcome()" class="uk-button uk-button-primary uk-button-small">Next</button>
+            </div>
+        </div>
+
+
+
+
+        <!-- ----------------- Mini Project Tab (not included) -------- -->
+        <br/>
+        <div style="display:none" id="questions_p">
+            <div>
+                <div align="center">
+                    <span class="heading" style="color:blue;font-size:1.5rem">NA</span>
+                </div>
+            </div>
+            <br/>
+            <br>
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small" onclick="showExercises();">Prev</button>&nbsp;&nbsp;&nbsp;
+                <button onclick="showCapstone()()" class="uk-button uk-button-primary uk-button-small">Next</button>
+            </div>
+            <p style="line-height: 115%; margin: 0cm 0cm .0001pt 18.0pt;">&nbsp;</span>
+            </p>
+        </div>
+
+        <!-- ---------------------- Getting Started Tab -------------------------------- -->
+
+        <div style="display:none" id="welcome_p">
+            <div>
+                <div align="center">
+                    <span class="heading" style="color:blue;font-size:1.5rem">DevOps Playground Instructions</span>
+                </div>
+            </div>
+            <br>
+            <span class="heading" style="color:blue">Must read instructions before you start practicing:</span>
+
+            <ul>
+                <li>You have been provided with an environment with the necessary software and tools for practicing.</li>
+                <br>
+                <li>The project has already been loaded into your environment. Execute the file 
+                    <strong>"click-here.sh"</strong> to complete the setup. In case you close this tab/browser, you can execute the file 
+                    <strong>"instruction.sh"</strong> to reopen this page.
+                </li>
+                <br>
+				<li>Please note that you will need to install necessary plugins on Jenkins before proceeding with Jenkins CI setup exercises. Follow instructions provided under exercises to complete Jenkins setup.</li>
+				<br>
+                <li>The code cannot be retrieved after the window is closed. In order to save your code, make use of the clipboard provided on the left most side of the screen for future reference.</li>
+                <br>
+                <li>Please note that this environment has been provided for a limited time only.</li>
+                <br>
+            </ul>
+
+
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small" onclick="showAbout();">Prev</button>&nbsp;&nbsp;&nbsp;
+                <button onclick="showDemos()" class="uk-button uk-button-primary uk-button-small">Next</button>
+            </div>
+            <br>
+        </div>
+
+
+        <!-- ----------------------Demos Tab -------------------------------- -->
+
+        <div style="display:none" id="demo">
+            <div>
+                <div align="center">
+                    <span class="heading" style="color:blue;font-size:1.5rem">DevOps Playground - Demos</span>
+                </div>
+            </div>
+			</br>
+			</br>
+			<table class="uk-table uk-table-responsive" border="1">
+               
+                <tr>
+                    <td><strong> Instructions:</strong><br/>
+                        <ul>
+                            <li>Demo videos are available as resources on Lex. Use the links given below to view the videos, or search using the resource name mentioned.</li>
+                            <li>For viewing the videos you need to access Lex within Infosys intranet</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+			<strong>TABLE 2: Lex demo videos and their links</strong>
+        
+                <table class="uk-table uk-table-responsive" border="1" style="width:100%">
+                    <thead>
+                        <tr style="background-color:cornflowerblue;color:white;font-size:18px">
+                            <td style="text-align:center">#</td>
+                            <td style="text-align:center">Lex Demo Resource Name</td>
+                            <td style="text-align:center">Lex Resource URL</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 1</td>
+                            <td style="vertical-align:middle">Version control using Git – 1</td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256513904544153648" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256513904544153648</td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 2</td>
+                            <td style="vertical-align:middle">Version control using Git – 2 </td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256513564482764849" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256513564482764849</td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 3</td>
+                            <td style="vertical-align:middle">Static quality analysis with SonarQube </td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256514237058252850" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256514237058252850</td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 4</td>
+                            <td style="vertical-align:middle">Build Automation using Maven </td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_012560587929501696161" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_012560587929501696161</td>
+
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 5</td>
+                            <td style="vertical-align:middle">Jenkins Basic Configurations</td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01257494479848243225" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01257494479848243225</td>
+						</tr>
+						
+						<tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 6</td>
+                            <td style="vertical-align:middle">Continuous Integration using Jenkins </td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256782894005452832" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_0125577071877816321/lex_auth_01256782894005452832</td>
+						</tr>
+						
+						<tr>
+                            <td style="text-align:center;vertical-align:middle">Demo 7</td>
+                            <td style="vertical-align:middle">Gating conditions in Jenkins pipeline  </td>
+                            <td><a href="https://lex.infosysapps.com/viewer/lex_auth_012662524958916608162" target=_blank>https://lex.infosysapps.com/viewer/lex_auth_012662524958916608162</td>
+						</tr>
+						
+                    </tbody>
+                </table>
+				
+				<br/>
+				<br>
+				<div align="center">
+					<button class="uk-button uk-button-primary uk-button-small" onclick="showWelcome()";>Prev</button>&nbsp;&nbsp;&nbsp;
+					<button onclick="showExercises()" class="uk-button uk-button-primary uk-button-small">Next</button>
+				</div>
+				<p style="line-height: 115%; margin: 0cm 0cm .0001pt 18.0pt;">&nbsp;</span>
+				</p>
+				
+        </div>
+     
+
+	 <!-- ----------------------Exercises Tab -------------------------------- -->
+        <div style="display:none" id="exercise_p">
+            <div>
+                <div align="center">
+                    <span class="heading" style="color:blue;font-size:1.5rem">DevOps Playground - Calculator Exercise</span>
+                </div>
+            </div>
+            <br/>
+            <table class="uk-table uk-table-responsive" border="1">
+               
+                <tr>
+                    <td><strong> Startup Instructions:</strong><br/>
+                        <ul>
+							<li>
+								After clicking on <strong>click-here.sh</strong>, eclipse will get loaded with the project present in the Project Explorer panel
+							</li>
+							<li>
+								You can access other server websites on Firefox, further details are provided in the table below.
+							</li>
+							<li>
+								Screenshots added here are illustrative and for reference only
+							</li>
+						</ul>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+			
+			<strong>TABLE 3: Tools and their details </strong>
+        
+                <table class="uk-table uk-table-responsive" border="1" style="width:100%">
+                    <thead>
+                        <tr style="background-color:cornflowerblue;color:white;font-size:18px">
+                            <td style="text-align:center">Activity</td>
+                            <td style="text-align:center">Tool Used</td>
+                            <td style="text-align:center">URL</td>
+							<td style="text-align:center">Login credentials</td>
+							<td style="text-align:center">Path to reports</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">CI</td>
+                            <td>Jenkins</td>
+							<td> <a href="http://localhost:8064/" target=_blank>http://localhost:8064</a></td>
+							<td>admin | admin</td>
+							<td>NA</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">IDE</td>
+                            <td>Eclipse</td>
+							<td> NA</td>
+							<td>NA</td>
+							<td>NA</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Version control</td>
+                            <td>Git , Git plugin</td>
+							<td> /root/Desktop/user_repo/Project/.git</td>
+							<td>NA</td>
+							<td>NA</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle">Static analysis</td>
+                            <td>Sonarqube</td>
+							<td> <a href="http://localhost:9000">http://localhost:9000</a></td>
+							<td>admin | admin</td>
+							<td>NA</td>
+                        </tr>
+                       <tr>
+                            <td style="text-align:center;vertical-align:middle">Unit testing</td>
+                            <td>Junit</td>
+							<td> NA</td>
+							<td>NA</td>
+							<td>target/surefire-reports/*.xml</td>
+                        </tr>
+						<tr>
+                            <td style="text-align:center;vertical-align:middle">Code coverage</td>
+                            <td>Cobertura</td>
+							<td>NA</td>
+							<td>NA</td>
+							<td>target/site/cobertura/coverage.xml</td>
+                        </tr>
+						<tr>
+                            <td style="text-align:center;vertical-align:middle">Artifact repository</td>
+                            <td>Artifactory</td>
+							<td> <a href="http://localhost:8081/artifactory" target=_blank>http://localhost:8081/artifactory</a></td>
+							<td>admin | password</td>
+							<td>NA</td>
+                        </tr>
+						<tr>
+                            <td style="text-align:center;vertical-align:middle">Deployment</td>
+                            <td>Tomcat 8</td>
+							<td> <a href="http://localhost:8080" target=_blank>http://localhost:8080</a></td>
+							<td>admin | s3cret</td>
+							<td>NA</td>
+                        </tr>
+						<tr>
+						<td colspan="5">You can make use of the 
+								<strong>Utility folder (Desktop/user_repo/Utility)</strong>
+								in case any of the tools are not running, to stop or start the services if needed.
+						</td>
+                    </tbody>
+                </table>
+			
+            <span class="heading" style="color:blue">Problem Statement:</span>
+            <br>
+
+            <br>
+           There is a 
+				<strong>Calculator application</strong>
+				provided to you in Eclipse. It is a web application written using jsp. There is a pom.xml provided which contains the various Maven build lifecycle targets defined. Unit test cases are also provided to you. index.jsp is the landing page of the web application.
+            <br/>
+            <br/>
+ 
+            <span class="heading" style="color:blue">
+                Exercises:</span>
+            <br/><br/>
+          
+
+            <strong>Exercise 1: Operations on Git Repository using Eclipse IDE</strong>
+			<br/>
+			<strong>Estimated time: 15 minutes</strong>
+			<br/>
+			</br>
+			Use the project as a local Git repository and commit changes on the local branch as shown:
+			<br/>
+			</br>
+			<img src="./img/1.1.png">
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>Expand the project present in the ‘Project Explorer’ tab and open the index.jsp file inside src/main/webapp.</li>
+				<li>Change the background color to “purple” and save the file.</li>
+				<li>Right click on project in ‘Project Explorer’->Team->Commit->Enter appropriate comments for the commit and click on the Commit button.</li>		
+				<li>The change has now been committed.</li>
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+
+            <strong>Exercise 2: Creating profiles using SonarQube</strong>
+			<br/>
+			<strong>Estimated time: 15 minutes</strong>
+			<br/>
+			</br>
+			Create a quality profile for SonarQube with a custom set of rules as shown:
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>Go to <a href ="http://localhost:9000"> http://localhost:9000</a> (web interface of SonarQube )->Log in using credentials mentioned in the table and go to the Quality profiles option.
+				<br>
+				<strong>Note:</strong> If you are unable to see Log In button on top-right of SonarQube dashboard, zoom out browser window using CTRL(-)
+				</li>
+				
+				</br>
+				<img src="./img/2.1.png">
+				</br>
+				</br>
+				<li>The default profile is “Sonar way”. Copy the profile and create a new one and name it EcStatic (the tabs are available on the RHS for this)</li>
+				<li>Make the new profile the default one (the tabs are available on the RHS for this)</li>		
+				</br>
+				<img src="./img/2.2.png">
+				</br>
+				</br>
+				<li>Deactivate few rules (Click on the number of rules hyperlink). This allows you to create the custom rules. Observe the number of rules now for the new profile created after deactivation. </li>
+				</br>
+				<img src="./img/2.3.png">
+				</br>
+            </ul>
+            <br/>
+            <br/>
+            <br/>	
+			
+			<strong>Exercise 3: Using SonarQube with build script</strong>
+			<br/>
+			<strong>Estimated time: 20 minutes</strong>
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>Right click on project in ‘Project Explorer’ -> Run as…-> Maven Build… </br>
+				Run static code analysis on the project by running maven build with parameters as “clean compile sonar:sonar”.</li>
+				</br>
+				<img src="./img/3.1.png">
+				</br>
+				</br>
+				<li>Check the reports generated on the SonarQube web dashboard in Firefox browser.</li>
+				</br>
+				<img src="./img/3.2.png">
+            </ul>
+            <br/>
+            <br/>
+            <br/>	
+			
+			<strong>Exercise 4: Setting Up Artifactory folder</strong>
+			<br/>
+			<strong>Estimated time: 10 minutes</strong>
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>Open Artifactory on Firefox and login. From admin option, under Repositories choose Local -> create new repository using (+) New option.</li>
+				<li>Create a local repository key on the JFrog Server from Firefox with the folder name as mentioned in the pom.xml of the project in Eclipse, within the <repository> tag.</li>
+				</br>
+				<img src="./img/5.1.png">
+				</br>
+				</br>
+				<img src="./img/5.2.png">
+				<li>
+					To allow automated deployment to this repository through Jenkins pipleline, set the security permissions as mentioned next. Click on <strong>Admin</strong> tab on the left and go to <strong>Permissions</strong> under Security option as shown below
+					<br>
+					<br>
+					<img src="./img/5.3.png">
+					<br>
+					<br>
+				</li>
+				<li>
+					Select the <strong>anything</strong> option as shown below
+					<br>
+					<br>
+					<img src="./img/5.4.png">
+					<br>
+					<br>
+				</li>
+				<li>
+					Select the tab for <strong>Groups</strong> and select on the <strong>Manage</strong> checkbox as shown
+					<br>
+					<br>
+					<img src="./img/5.5.png">
+					<br>
+					<br>
+				</li>
+				<li>
+					Select the tab for <strong>Users</strong> and select on the <strong>Manage</strong> checkbox as shown and click on <strong>Save and Finish</strong>
+					<br>
+					<br>
+					<img src="./img/5.6.png">
+					<br>
+					<br>
+				</li>
+            </ul>
+            <br/>
+            <br/>
+            <br/>	
+			
+			<strong>Exercise 5: Build automation using Maven</strong>
+			<br/>
+			<strong>Estimated time: 20 minutes</strong>
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>Execute the maven build with parameters by running the pom.xml in the order “clean compile sonar:sonar test cobertura:cobertura war:war deploy” as shown below</li>
+				</br>
+				<img src="./img/4.1.png">
+				</br>
+				</br>
+				<li>On successful execution, you can view execution reports under target folder within your project and static analysis report on SonarQube. </li>
+				<ol type="number">
+					<li>Verify updated static analysis report on SonarQube as per custom quality profile created</li>
+					<li>Verify unit test reports generated within target/surefire-reports folder in xml and txt format. Open xml reports to view test results within Junit console window in Eclipse.</li>
+					</br>
+					<img src="./img/4.2.png">
+					</br>
+					</br>
+					<li>Verify Cobertura code coverage reports in html format under target/site/Cobertura. Open index.html in Firefox browser and view coverage reports for java classes and methods</li>
+					</br>
+					<img src="./img/4.3.png">
+					</br>
+					</br>
+				</ol>
+            </ul>
+            <br/>
+            <br/>
+            <br/>	
+			
+			
+			
+			
+			<strong>Exercise 6: Installing Plugins to Jenkins</strong>
+			<br/>
+			<strong>Estimated time: 15 minutes</strong>
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>Go to Jenkins URL and login using given credentials. Open Manage Jenkins -> Manage Plugins -> Click on the Advanced tab and upload required plugins as shown. The plugins are available on the following: <strong>/root/Desktop/Jenkins-Plugins</strong></li>
+				</br>
+				<img src="./img/6.1.png">
+				<img src="./img/6.1.jpg">
+				</br>
+				</br>
+				<li>You may also need to download other plugins. Select the below plugins from Available tab and “Install without Restart”.</li>
+					<ul type="numbers">
+						<li>Copy artifact</li>
+						<br>
+						<li>Workspace cleanup</li>
+						<br>
+						<li>Cobertura</li>
+						<br>
+						<li>Folders</li>
+						<br>
+						<li>Artifactory</li>
+						<br>
+						<li>JUnit</li>
+					</ul>
+				<br>
+				<li> Tool configurations to be done in <strong>Manage Jenkins -> Global Tool configuration</strong></li>
+				<ul type="numbers">
+						<li>Git -> Set as <strong>/usr/bin/git</strong></li>
+						<br>
+						<li>JDK -> Set the name to JDK and path to JDK as <strong>/usr/lib/jvm/java-8-openjdk-amd64</strong></li>
+						<br>
+						<li>Create a new Maven installation MyMaven with the path pointing to <strong>/opt/maven</strong>. Use this in the configuration of the pipeline while invoking
+                     Maven targets (Uncheck Install Maven automatically)</li>
+					</ul>
+				<br>
+				<li>Tool configurations to be done in <strong>Manage Jenkins ->Configure system</strong></li>
+				<ul type="numbers">
+					<li>Set the URL of Jenkins to <a href="http://localhost:8064/" target="_blank">http://localhost:8064</a></li>
+					<br>
+				</ul>
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+			
+			
+			<strong>Exercise 7: Job Creation & configuring build pipeline in Jenkins</strong>
+			<br/>
+			<strong>Estimated time: 150 minutes</strong>
+			<br/>
+			</br>
+			Create a folder for Calculator project build jobs. Within this, create the following jobs:
+			<ul type="disc">
+                <li>Setup</li>
+				<li>Compile</li>
+				<li>StaticAnalysis</li>
+				<li>UnitTest</li>
+				<li>CodeCoverage</li>
+				<li>ToArtifactory</li>
+				<li>War</li>
+				<li>SmokeTest</li>
+            </ul>
+			</br>
+			<img src="./img/7.1.png">
+			</br>
+			</br>
+			Configure each of the jobs as shown below::
+            <ol type="number">
+                <li>Setup</li>
+				</br>
+				<img src="./img/7.2.png">
+				</br>
+				<img src="./img/7.3.png">
+				<img src="./img/7.3.jpg">
+				</br>
+				<img src="./img/7.4.png">
+				</br>
+				<img src="./img/7.5.png">
+				</br>
+				</br>
+				<li>Compile</li>
+				<img src="./img/7.6.png">
+				</br>
+				<img src="./img/7.7.png">
+				</br>
+				<img src="./img/7.8.png">
+				</br>
+				<img src="./img/7.9.png">
+				</br>
+				</br>
+				<li>UnitTest</li>
+				<img src="./img/7.10.png">
+				</br>
+				<img src="./img/7.11.png">
+				</br>
+				<img src="./img/7.12.png">
+				</br>
+				<img src="./img/7.13.png">
+				</br>
+				</br>
+				<li>CodeCoverage</li>
+				<img src="./img/7.14.png">
+				</br>
+				<img src="./img/7.15.png">
+				</br>
+				<img src="./img/7.16.png">
+				</br>
+				<img src="./img/7.17.png">
+				</br>
+				</br>
+				<li>StaticAnalysis</li>
+				<img src="./img/7.18.png">
+				</br>
+				<img src="./img/7.19.png">
+				</br>
+				<img src="./img/7.20.png">
+				</br>
+				<img src="./img/7.21.png">
+				</br>
+				</br>
+				<li>War</li>
+				<img src="./img/7.22.png">
+				</br>
+				<img src="./img/7.23.png">
+				</br>
+				<img src="./img/7.24.png">
+				</br>
+				<img src="./img/7.25.png">
+				</br>
+				</br>
+				<li>ToArtifactory</li>
+				<img src="./img/7.26.png">
+				</br>
+				<img src="./img/7.27.png">
+				</br>
+				<img src="./img/7.28.png">
+				</br>
+				<img src="./img/7.29.png">
+				</br>
+				</br>
+				<li>SmokeTest</li>
+				<img src="./img/7.30.png">
+				</br>
+				<img src="./img/7.31.png">
+				</br>
+				<img src="./img/7.32.png">
+				</br>
+				<img src="./img/7.33.png">
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+			
+			
+			<strong>Exercise 8: Observing Build Reports and Pipeline View Configuration</strong>
+			<br/>
+			<strong>Estimated time: 20 minutes</strong>
+			<br/>
+			</br>
+			Steps:
+            <ul type="disc">
+                <li>To view jobs in pipeline view and see execution results, create a Build Pipeline View as shown below:</li>
+				</br>
+				<img src="./img/8.1.png">
+				</br>
+				</br>
+				<li>Enter the jobs folder in Jenkins -> click on the ‘+’ sign available on top of the jobs as shown below</li>
+				</br>
+				<img src="./img/8.2.png">
+				</br>
+				</br>
+				<li>Give a name to the pipeline view (for eg.: OverView) and select the radio button for Build Pipeline View. Finally click on OK.:</li>
+				</br>
+				<img src="./img/8.3.png">
+				</br>
+				</br>
+				<li>On the next page, select the first job in your pipeline as Setup under Pipeline Flow section as below and click OK:</li>
+				</br>
+				<img src="./img/8.4.png">
+				</br>
+				</br>
+				<li>Using ‘Run’ button in this view, execute build manually.</li>
+				</br>
+				</br>
+				On successful build access build results and reports of each job by selecting the latest build number on Jenkins dashboard.
+				<ol type="number">
+					<li>Verify Unit Test results:
+					</br>
+					Open the latest build of UnitTest in Jenkins and click on the option of Test Result on the left side.</li>
+					</br>
+					<img src="./img/8.5.png">
+					</br>
+					</br>
+					<li>Code Coverage results:
+					</br>
+					Open the latest build of CodeCoverage in Jenkins and click on the option of Coverage Result on the left side.</li>
+					</br>
+					<img src="./img/8.6.png">
+					</br>
+					</br>
+					<li>Static Analysis reports can be viewed directly from SonarQube dashboard</li>
+					<li>War file generation:
+					</br>
+					Verify that a new war file has been created within target folder of build workspace of War job</li>
+					</br>
+					<img src="./img/8.7.png">
+					</br>
+					</br>
+					<li>Binary version update on Artifactory
+					</br>
+					Verify that a new version of the war file is uploaded on Artifactory server within your project folder</li>
+					</br>
+					<img src="./img/8.8.png">
+					</br>
+					</br>
+					<li>Smoke Test
+					</br>
+					To verify that the webapp is successfully deployed on Tomcat web server, open the hosted webapp on browser using Tomcat URL and context path.</li>
+					</br>
+					<img src="./img/8.9.png">
+					</br>
+					</br>
+				</ol>
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+			
+			
+			<strong>Exercise 9: Configuring Gating Conditions</strong>
+			<br/>
+			<strong>Estimated time: 35 minutes</strong>
+			<br/>
+			</br>
+			<u><b>1. Gating in SonarQube</b></u>
+            <ul type="disc">
+                <li>Apply the following Quality Gate in the SonarQube Server and bind the calculator project to it like below. Run the static analysis one more time after applying the gate.</li>
+				</br>
+				<img src="./img/9.1.png">
+				</br>
+				<img src="./img/9.2.png">
+				</br>
+				</br>
+				<li>To create quality gate in SonarQube log into SonarQube -> Click on the tab for Quality Gates->Create-> enter “NaviGate” as name -> enter “Critical Issues” as metric in “add 			condition” drop down list and create a rule as shown below. Click on add button.<br>
+				Similarly create all the rules as shown above.</li>
+				<li>To link the “NaviGate” with project, use below shown option available in the same page (check the project name in without section, then that gate applied)</li>
+				</br>
+				<img src="./img/9.3.png">
+				</br>
+				</br>
+				<li>Once static analysis done (by running Maven Target in Eclipse) using SonarQube, you can observe the current analysis results on SonarQube dashboard as shown below.</li>
+				</br>
+				<img src="./img/9.4.png">
+				</br>
+				<img src="./img/9.5.png">
+				</br>
+				Furthermore, executing Jenkins pipeline after applying gate should cause the StaticAnalysis job to fail.
+				</br>
+				</br>
+			</ul>
+			</br>
+			</br>
+			<u><b>2. Gating in Jenkins:</b></u>
+			</br>
+			<b>(i) Gating condition in Unit Testing job: </b>
+			<ul type="disc">
+				<li>You can use unit test results to decide the stability of build by setting up health report amplification factor as shown below.</li>
+				</br>
+				<img src="./img/9.6.png">
+				</br>
+				</br>
+				<li>Choose the first option as shown below in Jenkins job configuration to link with downstream job in the pipeline.</li>
+				</br>
+				<img src="./img/9.7.png">
+				</br>
+				</br>
+				<li>Make changes in code so that one of the unit test cases fails, and commit changes to Git. Now on executing Jenkins pipeline, UnitTesting job should automatically fail and stop the build. Verify failing test reports under latest build folder.</li>
+			</ul>
+			</br>
+			</br>
+			<b>(ii) Gating condition in Code Coverage job: </b>
+			</br>
+			<ul type="disc">
+				<li>You can use code coverage results to decide the stability of build as shown below.</li>
+				</br>
+				<img src="./img/9.8.png">
+				</br>
+				</br>
+				<li>Choose the first option as shown below in Jenkins job configuration to link with downstream job in the pipeline.</li>
+				</br>
+				<img src="./img/9.9.png">
+			</ul>
+			</br>
+			</br>
+			<b>(iii) Gating using PowerShell script in Jenkins  (Method 2): </b>
+			</br>
+			</br>
+			<strong> Note: </strong> In case, Jenkins plugin does not support gating threshold 
+			configurations, we can write script to analyze the data and decide the build stability. 
+			Jenkins has plugins to write different language scripts, in our demo we are using PowerShell 
+			Script to add a gating condition for code coverage job.
+			</br>
+			</br>
+			<ul type="disc">
+				<li>Install PowerShell plugin on Jenkins.</li>
+				<li>Go to job (code coverage) -> configure -> add build step -> choose Windows PowerShell -> enter power shell script in script pane as shown below.</li>
+				</br>
+				<img src="./img/9.10.png">
+			</ul>
+			On executing the pipeline, CodeCoverage job will fail if code coverage is below the threshold limit and you can verify appropriate failure message from the latest build logs.
+            <br/>
+            <br/>
+            <br/>
+			
+			<p>
+			<strong>Summary:</strong> You have learnt how to setup Jenkins CI pipeline for a Maven project with necessary build phases 
+			and quality checks.
+			</p>
+
+			<br/>
+				<br>
+				<div align="center">
+					<button class="uk-button uk-button-primary uk-button-small" onclick="showDemos()";>Prev</button>&nbsp;&nbsp;&nbsp;
+					<button onclick="showCapstone()" class="uk-button uk-button-primary uk-button-small">Next</button>
+				</div>
+				<p style="line-height: 115%; margin: 0cm 0cm .0001pt 18.0pt;">&nbsp;</span>
+				</p>
+			
+        </div>
+		
+		
+		
+		
+        <!-- ----------------------Capstone Tab -------------------------------- -->
+        <div style="display:none" id="capstone_p">
+           <div>
+			        <div align="center">
+			        <span class="heading"> DevOps Using Open Source Tool Stack</span>
+			        </div>
+			    </div>
+                 <p>
+					<strong>
+                     Context:
+					 </strong>
+					 There is a Calculator application provided to you in Eclipse. It
+                     is a web application written using jsp. There is a pom.xml provided which
+                     contains the various Maven build lifecycle targets defined. Unit test cases
+                     are also provided to you. index.jsp is the landing page of the web
+                     application.
+					 </p>
+					 <p>
+					 <strong>Note: </strong>
+					 If you  would like to go through learning materials and videos related to this course, please refer to the Lex course for Infosys DevOps Java Certification  
+					 <a href="https://lex.infosysapps.com/toc/lex_auth_0125577071877816321" target=_blank>here</a>
+					 </p>
+					 <p>
+					 <strong>
+					 Objective:</strong>
+					 Create a Jenkins pipeline with the following jobs:
+					<ul>
+					<li>CI initialization – invoking clean, compile targets </li>
+					<li>CI quality – invoking sonar, Junit, code coverage targets </li>
+					<li>CI publish – invoking war,publishing to artifactory and smoke test </li>
+					</ul>
+					
+					<strong>Steps:</strong>
+					<ol>
+						<li>Use the project as a local Git repository and commit changes on the local branch.</li>
+						<li>Configure the build using Maven for invoking sonar, JUnit, cobertura, creation of war file and baselining war version to artifactory.</li>
+						<li>Run the Maven build in Eclipse and observe the results</li>
+						<li>Configure jobs in Jenkins for the various targets provided earlier </li>
+						<li>Create a pipeline view of the jobs </li>
+						<li>Schedule a 2 minute build (Poll SCM option)</li>
+						<li>Trigger a build and observe the pipeline view </li>
+						<li>Go back to Eclipse and make some UI changes (or any changes to code) and commit the code back to the local git repository.
+							The build pipeline in Jenkins should get triggered automatically </li>
+						<li>Open SonarQube (<a href="http://localhost:9000" target=_blank>http://localhost:9000</a>). Add custom profile and custom gating conditions as learnt in the demos.  Give values so that you can observe a broken and a smooth build</li>
+						<li>Trigger a build in Jenkins and observe the gating condition in SonarQube working.</li>
+						<li>Create a powershell script to check the unit test code coverage and fail if expected coverage is not achieved. Add this to code coverage job</li>
+						<li>Make changes to the unit tests (so that some of them fail) and observe the gating conditions and build failing in Jenkins.
+						Correct them and observe that the build becomes stable. (Make changes and commit the test code from Eclipse)</li>
+						<li>Trigger a build in Jenkins and observe the gating condition script working for code coverage job.</li>
+				
+					<p>
+						<strong>Summary of this Exercise:</strong> You have learnt to use Jenkins for continuous integration!
+					</p>
+
+
+
+
+
+            </ul>
+            <div align="center">
+                <button class="uk-button uk-button-primary uk-button-small uk-flex uk-flex-middle uk-icon" onclick="showExercises()">Prev</button>
+
+            </div>
+            <br>
+        </div>
+
+
+    </div>
+</body>
+<script src="./js/new.js" rel="text/javascript"></script>
+<script>showAbout();</script>
+
+</html>
