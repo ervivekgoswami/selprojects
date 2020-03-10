@@ -1,5 +1,8 @@
 package CucumberFramework.stepFiles;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +17,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
 
 public class Login {
 	WebDriver driver;
@@ -70,7 +72,7 @@ public class Login {
 		driver.findElement(By.xpath(".//*[@id='password']")).sendKeys("march111");
 	}
 
-	@When("^User clicks on the login button$")
+	@When("User clicks on the login button")
 	public void user_clicks_on_the_login_button() throws Throwable {
 		driver.findElement(By.xpath(".//*[@id='submit-button']")).click();
 	}
@@ -79,6 +81,6 @@ public class Login {
 	public void user_should_be_taken_to_the_successful_login_page() throws Throwable {
 		Thread.sleep(3000);
 		WebElement askQuestionButton = driver.findElement(By.xpath("//a[contains(text(), 'Ask Question')]"));
-		Assert.assertEquals(true, askQuestionButton.isDisplayed());
+		AssertJUnit.assertEquals(true, askQuestionButton.isDisplayed());
 	}
 }
