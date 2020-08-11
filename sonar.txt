@@ -1,7 +1,0 @@
-6b594a9614d12a6bc4200e0e52165b06cbd8e7b1
-
-mvn sonar:sonar \
-  -Dsonar.projectKey=sample \
-  -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.login=6b594a9614d12a6bc4200e0e52165b06cbd8e7b1
-  https://www.smashingmagazine.com/2017/08/ai-chatbot-web-speech-api-node-js/
