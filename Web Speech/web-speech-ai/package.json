@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/girliemac/web-speech-ai/issues"
   },
-  "homepage": "https://github.com/girliemac/web-speech-ai#readme"
+  "homepage": "https://github.com/girliemac/web-speech-ai#readme",
+  "devDependencies": {}
 }
