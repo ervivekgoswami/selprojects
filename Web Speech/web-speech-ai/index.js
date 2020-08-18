@@ -4,6 +4,8 @@ require('dotenv').config()
 const APIAI_TOKEN = process.env.APIAI_TOKEN;
 const APIAI_SESSION_ID = process.env.APIAI_SESSION_ID;
 
+console.log("my APIAI Toke is: ",APIAI_TOKEN);
+
 const express = require('express');
 const app = express();
 
