@@ -1,0 +1,36 @@
+Hi All/ Hi Ritika,
+
+Let me just give you a brief about GBMA automation journey and also we will talk about
+what all hurdles / challenge we had througout our journey.
+
+So our automation journey starts with tranisition from Digital TE team. In the month of Jan, this year,
+all automation work developed in protractor framework have been tranistioned from Digital TE team to GTI folks.
+
+After the tranisition application gone through some major functionality workflow and UI changes and due to which there were issues in the scripts.
+And our regression suite was unstable required maintenance.
+
+So we have around 1500 scripts in our regression suite and that made it more difficult for us to fix them
+Since our scripts were failing at high rate they were becoming unstable and in course this is leading to increase in the total execution time of our regression suite.
+
+now to overcome these issues we came up with plan.
+where we firstly foccused on fixing the scripts according to the new functionality. Second, updated test data in our scripts which was highly outdated. as the scripts were not maintained for almost around 3 months. By doing all such fixing and maintenance.
+
+Now, Out of 1500 test 90% are fixed and planning to complete the rest. Now our scripts are modular and scalable, stable, running smooth.
+Which show a great overall improvement in terms of stability and productivity. As you can see the execution graph for the month of June and july has surpassed 87%.
+ 
+
+And the second thing which we implemented. We created smoke suite and get it schedule on jenkins for our test environments. 
+This smoke suite contains 30 scripts which runs in between 15 to 20 mins. 
+Its again a big milestone for QA team since now our manual effort to execute smoke tests everytime build is deployed is removed.
+That is all have been done in the project till July.
+
+1. Be Louder
+2. Protractor automation and it was fragile
+
+Now as part of our Future automation Roadmap Ravish will walk you through that, we have few have things currently QA is working on.
+Migration of existing famework from protractor to webdriver IO. 
+as Protractor is ending its support in coming 2022 so we are in process of migrating scripts
+to WebDriver IO.   Already started the work on the same. 
+In Sprint automation is also something we achieved starting from last sprint.
+and one thing that is currently in our future plan is to enahnce our Regression coverage.
+Cross browser verification 
